@@ -1,0 +1,51 @@
+{
+  "show_draft_notice": false,
+  "hide_from_search": false,
+  "registration_heading": "Register for the season",
+  "registration_note": "Registration runs through TeamSnap. Pick the form that fits you.",
+  "registration_links": [
+    {
+      "label": "Men's",
+      "url": "",
+      "note": ""
+    },
+    {
+      "label": "Women's",
+      "url": "",
+      "note": ""
+    },
+    {
+      "label": "Masters",
+      "url": "",
+      "note": "35 and over"
+    },
+    {
+      "label": "One-day registration",
+      "url": "",
+      "note": "Only for players who have never played rugby league before"
+    },
+    {
+      "label": "Admin registration",
+      "url": "",
+      "note": "Coaches, managers and club staff"
+    }
+  ],
+  "coach_registration_url": "",
+  "volunteer_form_url": "https://docs.google.com/forms/d/e/1FAIpQLSeO4aeDzX28UQjwHBe7c8v1q4KL5yYexR4xe9J3of-lMKTv2Q/viewform",
+  "supporters_signup_url": "https://go.teamsnap.com/forms/237841",
+  "mailing_list_url": "https://mailchi.mp/eff675036fb0/bcrl",
+  "store_url": "https://urstore.ca/bc-rugby-league",
+  "calendar_embed_url": "https://calendar.google.com/calendar/embed?src=c_fitob6erg2p5ocdrogb24edb5g%40group.calendar.google.com&ctz=America%2FVancouver",
+  "clubs_map_embed_url": "https://www.google.com/maps/d/embed?mid=1y6mrQG8Bq4bDOLU6dUWIB1zqOkR6D0A",
+  "fixtures_sheet_csv_url": "",
+  "social": {
+    "instagram": "https://www.instagram.com/rugbyleaguebc/",
+    "facebook": "https://www.facebook.com/RugbyLeagueBC/",
+    "youtube": "https://www.youtube.com/channel/UCV9070ofVEnew5eDmxulfrg",
+    "x": "https://twitter.com/RugbyLeagueBC",
+    "linkedin": "https://www.linkedin.com/company/54368660/"
+  },
+  "registration_open": false,
+  "registration_closed_note": "Registration for the 2027 season isn't open yet. The links go up here as soon as it opens.",
+  "admin_registration_url": ""
+}

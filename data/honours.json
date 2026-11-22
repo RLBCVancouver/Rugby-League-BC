@@ -1,0 +1,18 @@
+{
+  "seasons": [
+    { "year": "2026", "premier": "Whistler Wolves", "runner_up": "Vancouver Valley Vipers", "score": "28-14", "venue": "Burnaby Lake Rugby Club", "results_image": "/assets/img/season-2026.webp" },
+    { "year": "2025", "premier": "Whistler Wolves", "runner_up": "Vancouver Valley Vipers", "score": "18-16", "venue": "Langley Rugby Club", "results_image": "/assets/img/season-2025.webp" },
+    { "year": "2024", "premier": "Whistler Wolves", "runner_up": "Vancouver Dragons", "score": "26-12", "venue": "South Surrey Athletic Park", "results_image": "/assets/img/season-2024.webp" },
+    { "year": "2023", "premier": "Point Grey Thunder", "runner_up": "Vancouver Dragons", "score": "28-18", "venue": "Klahanie Park, North Vancouver", "results_image": "/assets/img/season-2023.webp" },
+    { "year": "2022", "premier": "Point Grey Thunder", "runner_up": "Valley Warriors", "score": "62-12", "venue": "Wolfson Rugby Field, UBC", "results_image": "/assets/img/season-2022.webp" },
+    { "year": "2021", "premier": "Point Grey Thunder", "runner_up": "Vancouver Valley Vipers", "score": "38-34", "venue": "Klahanie Park, North Vancouver", "results_image": "/assets/img/season-2021.webp" },
+    { "year": "2019", "premier": "Coastal Cougars", "runner_up": "Point Grey Thunder", "score": "38-28", "venue": "Burnaby Lake", "results_image": "/assets/img/season-2019.webp" },
+    { "year": "2018", "premier": "Vancouver Dragons", "runner_up": "Coastal Cougars", "score": "26-24", "venue": "Burnaby Lake", "results_image": "/assets/img/season-2018.webp" },
+    { "year": "2017", "premier": "Valley Warriors", "runner_up": "Kelowna Roosters", "score": "20-0", "venue": "", "results_image": "/assets/img/season-2017.webp" },
+    { "year": "2016", "premier": "Coastal Cougars", "runner_up": "Abbotsford Griffins", "score": "48-12", "venue": "", "results_image": "/assets/img/season-2016.webp" },
+    { "year": "2015", "premier": "Coastal Cougars", "runner_up": "Vancouver Dragons", "score": "30-6", "venue": "South Surrey Athletic Park", "results_image": "/assets/img/season-2015.webp" },
+    { "year": "2014", "premier": "Surrey Beavers", "runner_up": "Coastal Cougars", "score": "", "venue": "", "results_image": "" },
+    { "year": "2013", "premier": "Surrey Beavers", "runner_up": "Sea to Sky Eagles", "score": "", "venue": "", "results_image": "" },
+    { "year": "2012", "premier": "Surrey Beavers", "runner_up": "Kelowna Crows", "score": "", "venue": "", "results_image": "" }
+  ]
+}

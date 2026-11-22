@@ -1,0 +1,10 @@
+{
+  "people": [
+    { "name": "Joshua Knight", "role": "President", "email": "josh.knight@rugbyleaguebc.ca", "photo": "/assets/img/board-josh-knight.webp" },
+    { "name": "Richard Marshall", "role": "VP Rugby Development", "email": "richard.marshall@rugbyleaguebc.ca", "photo": "" },
+    { "name": "Adam Timler", "role": "VP Finance", "email": "atimler@gmail.com", "photo": "" },
+    { "name": "Vacant", "role": "Secretary", "email": "", "photo": "" },
+    { "name": "Vacant", "role": "VP Partnerships", "email": "", "photo": "" },
+    { "name": "Vacant", "role": "VP Communications", "email": "", "photo": "" }
+  ]
+}

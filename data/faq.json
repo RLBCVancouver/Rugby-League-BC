@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "q": "What is Rugby League BC?",
+      "a": "Rugby League British Columbia (RLBC) is the non-profit governing body for rugby league in BC, Canada. It was founded in 2011, operates under Canada Rugby League, and runs the largest domestic rugby league competition in Canada."
+    },
+    {
+      "q": "How do I start playing rugby league in BC?",
+      "a": "Find the club nearest you on the Clubs page and get in touch, then register through the forms on the Get involved page. RLBC also runs Try Rugby League events for people who want to give it a go."
+    },
+    {
+      "q": "Do I need experience to play?",
+      "a": "No. A one-day registration is available for people who have never played rugby league before, and RLBC runs Try Rugby League events for newcomers."
+    },
+    {
+      "q": "What is the difference between rugby league and rugby union?",
+      "a": "Rugby league is 13 a side, while rugby union is 15 a side. League uses a six-tackle limit, similar to downs in football, and play restarts with a play-the-ball after each tackle. There are no contested rucks, so the game is faster and more open."
+    },
+    {
+      "q": "Which clubs play in the RLBC competition?",
+      "a": "The clubs currently competing are {clubs}. They are based in the Lower Mainland and Whistler."
+    },
+    {
+      "q": "When is the 2027 season?",
+      "a": "The 2027 draw is still being finalised. Provisional dates, including the RLBC 9s and the finals, are on the Fixtures and results page and are confirmed there as soon as they are set."
+    },
+    {
+      "q": "Is there a women's competition?",
+      "a": "Yes. The women's competition features multiple rugby 9s tournaments through June and a three-round 13-a-side competition in July. BC Storm is the women's provincial representative team."
+    },
+    {
+      "q": "Can older players take part?",
+      "a": "Yes. Masters rugby league is for players 35 and over, and the BC Silver Foxes are the masters representative team. Email masters@rugbyleaguebc.ca to register your interest."
+    },
+    {
+      "q": "What is the RLBC 9s?",
+      "a": "The RLBC 9s is the annual pre-season tournament, with men's and women's divisions. It is usually a single-day event that gives clubs a hit-out and welcomes new players to the game."
+    },
+    {
+      "q": "How do I become a coach or referee?",
+      "a": "Coaches complete the NCCP modules listed on the Get involved page, plus a Criminal Record Check if they work with youth. To start as a referee, email Blake Stewart at blake.stewart@rugbyleaguebc.ca."
+    },
+    {
+      "q": "How can my business sponsor rugby league in BC?",
+      "a": "RLBC offers flexible sponsorship packages, and the RLBC 9s is looking for a title sponsor. Read the 2027 sponsorship package on the Partners page and email Richard Marshall at richard.marshall@rugbyleaguebc.ca."
+    },
+    {
+      "q": "Who runs Rugby League BC?",
+      "a": "A volunteer board runs RLBC, led by {president}, President. The full board is listed on the About page."
+    },
+    {
+      "q": "Who won the most recent RLBC premiership?",
+      "a": "{premier}"
+    },
+    {
+      "q": "How do I contact Rugby League BC?",
+      "a": "Email board@rugbyleaguebc.ca or use the contact form and pick the topic that fits, so your message reaches the right person."
+    }
+  ]
+}

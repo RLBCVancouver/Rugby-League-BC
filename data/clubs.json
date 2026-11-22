@@ -1,0 +1,179 @@
+{
+  "clubs": [
+    {
+      "id": "wolves",
+      "slug": "whistler-wolves",
+      "name": "Whistler Wolves",
+      "short": "Wolves",
+      "logo": "/assets/img/club-whistler-wolves.webp",
+      "status": "",
+      "home_field": "Whistler Secondary School",
+      "founded": "2020",
+      "coaches": [
+        {
+          "role": "Head coach",
+          "name": "Blake Stewart"
+        }
+      ],
+      "practices": "",
+      "email": "president@whistlerwolves.com",
+      "website": "",
+      "instagram": "https://www.instagram.com/whistlerwolvesrl/",
+      "nines_titles": "2023, 2024",
+      "photo": "/assets/img/photo-wolves-players.webp"
+    },
+    {
+      "id": "vipers",
+      "slug": "vancouver-valley-vipers",
+      "name": "Vancouver Valley Vipers",
+      "short": "Vipers",
+      "logo": "/assets/img/club-vancouver-valley-vipers.webp",
+      "status": "",
+      "home_field": "Langley Rugby Club",
+      "founded": "2019",
+      "coaches": [
+        {
+          "role": "Head coach",
+          "name": "Stephen Lenahan"
+        }
+      ],
+      "practices": "",
+      "email": "stephenlenahan475@gmail.com",
+      "website": "",
+      "instagram": "https://www.instagram.com/vancouvervalleyvipers/",
+      "nines_titles": "",
+      "photo": "/assets/img/photo-vipers-run.webp"
+    },
+    {
+      "id": "thunder",
+      "slug": "point-grey-thunder",
+      "name": "Point Grey Thunder",
+      "short": "Thunder",
+      "logo": "/assets/img/club-point-grey-thunder.webp",
+      "status": "",
+      "home_field": "Wolfson Rugby Field, UBC. Practices at Ken Woods Field",
+      "founded": "2019",
+      "coaches": [
+        {
+          "role": "Head coach",
+          "name": "Didier Banse"
+        }
+      ],
+      "practices": "Tuesday and Thursday, 6:30 PM",
+      "email": "didier.banse@ubc.ca",
+      "website": "",
+      "instagram": "https://www.instagram.com/pointgreythunder/",
+      "nines_titles": "2022",
+      "photo": "/assets/img/photo-thunder-run.webp"
+    },
+    {
+      "id": "dragons",
+      "slug": "vancouver-dragons",
+      "name": "Vancouver Dragons",
+      "short": "Dragons",
+      "logo": "/assets/img/club-vancouver-dragons.webp",
+      "status": "",
+      "home_field": "Brockton Oval, Stanley Park",
+      "founded": "2012",
+      "coaches": [
+        {
+          "role": "Men's head coach",
+          "name": "Josh Knight"
+        },
+        {
+          "role": "Women's head coach",
+          "name": "Katie Grudzinski"
+        }
+      ],
+      "practices": "",
+      "email": "president@vancouverdragons.ca",
+      "website": "https://www.vancouverdragons.ca",
+      "instagram": "https://www.instagram.com/vancouver_dragons_/",
+      "nines_titles": "2018, 2026",
+      "photo": "/assets/img/photo-kick-chase.webp"
+    },
+    {
+      "id": "warriors",
+      "slug": "valley-warriors",
+      "name": "Valley Warriors",
+      "short": "Warriors",
+      "logo": "/assets/img/club-valley-warriors.webp",
+      "status": "Not competing",
+      "home_field": "South Surrey Athletic Field",
+      "founded": "2014",
+      "coaches": [
+        {
+          "role": "Head coach",
+          "name": "Adam Timler"
+        }
+      ],
+      "practices": "",
+      "email": "valleywarriorsrugbyleague@gmail.com",
+      "website": "",
+      "instagram": "https://www.instagram.com/valley_warrior/",
+      "nines_titles": "",
+      "photo": ""
+    },
+    {
+      "id": "cougars",
+      "slug": "coastal-cougars",
+      "name": "Coastal Cougars",
+      "short": "Cougars",
+      "logo": "/assets/img/club-coastal-cougars.webp",
+      "status": "Coming soon",
+      "home_field": "Howe Sound Secondary, Squamish",
+      "founded": "2012",
+      "coaches": [
+        {
+          "role": "Head coach",
+          "name": "Alec Douglas"
+        }
+      ],
+      "practices": "",
+      "email": "alec.p.douglas604@gmail.com",
+      "website": "",
+      "instagram": "https://www.instagram.com/coastalcougarsrl/",
+      "nines_titles": "2016, 2017, 2019",
+      "photo": ""
+    }
+  ],
+  "coming_soon": [
+    {
+      "name": "Abbotsford Griffins",
+      "logo": "/assets/img/crest-abbotsford-griffins.webp",
+      "url": ""
+    },
+    {
+      "name": "Kelowna Roosters",
+      "logo": "/assets/img/crest-kelowna-roosters.webp",
+      "url": ""
+    },
+    {
+      "name": "Surrey Beavers",
+      "logo": "/assets/img/crest-surrey-beavers.webp",
+      "url": ""
+    },
+    {
+      "name": "Richmond Bears",
+      "logo": "/assets/img/crest-richmond-bears.webp",
+      "url": "https://www.facebook.com/richmondbears/"
+    },
+    {
+      "name": "Edmonton Elks RLFC",
+      "logo": "/assets/img/crest-edmonton-elks.webp",
+      "url": "https://www.facebook.com/edmontonelksrlfc/"
+    }
+  ],
+  "interprovincial": [
+    {
+      "name": "Alberta Rugby League",
+      "logo": "/assets/img/crest-alberta-broncos.webp",
+      "url": "https://albertarugbyleague.square.site/"
+    },
+    {
+      "name": "Ontario Ospreys",
+      "logo": "/assets/img/crest-ontario-ospreys.webp",
+      "url": "https://www.ontarioospreys.ca/"
+    }
+  ]
+}

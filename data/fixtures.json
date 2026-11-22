@@ -1,0 +1,243 @@
+{
+  "season": "2026",
+  "season_heading": "2026 First Grade Men",
+  "lede": "Results from the 2026 season, and what's coming up next. The 2027 draw goes up here as soon as it's confirmed.",
+  "show_notice": true,
+  "notice_title": "2027 draw in progress.",
+  "notice_text": "The full draw, match dates and venues are still being finalised. Dates shown for 2027 are provisional and subject to confirmation.",
+  "show_provisional_dates": true,
+  "provisional_heading": "2027 season: provisional dates",
+  "provisional_dates": [
+    {
+      "date": "2027-05-15",
+      "label": "High School Nines"
+    },
+    {
+      "date": "2027-05-22",
+      "label": "RLBC 9s"
+    },
+    {
+      "date": "2027-05-29",
+      "label": "Round 1"
+    },
+    {
+      "date": "2027-06-05",
+      "label": "Round 2"
+    },
+    {
+      "date": "2027-06-12",
+      "label": "Round 3"
+    },
+    {
+      "date": "2027-06-19",
+      "label": "Round 4"
+    },
+    {
+      "date": "2027-06-26",
+      "label": "Round 5"
+    },
+    {
+      "date": "2027-07-03",
+      "label": "Bye: international round"
+    },
+    {
+      "date": "2027-07-10",
+      "label": "Round 6"
+    },
+    {
+      "date": "2027-07-17",
+      "label": "Semi-final"
+    },
+    {
+      "date": "2027-07-24",
+      "label": "Grand final"
+    }
+  ],
+  "events": [
+    {
+      "date": "2027-02-21",
+      "end_date": "",
+      "title": "Wigan & Leigh College visit to Vancouver",
+      "time": "",
+      "venue": "Local opposition, venue and kick-off to be confirmed",
+      "status": "Proposed",
+      "link": "/news/leigh-leopards-linked-to-vancouver-visit/",
+      "month_only": true
+    },
+    {
+      "date": "2027-02-25",
+      "end_date": "2027-02-26",
+      "title": "Vancouver Dragons at the NRL Vegas 9s",
+      "time": "",
+      "venue": "Las Vegas, Nevada",
+      "status": "",
+      "link": "/news/dragons-heading-to-vegas/"
+    },
+    {
+      "date": "2027-03-14",
+      "end_date": "",
+      "title": "Wellington Wedgetails vs BC Bulldogs",
+      "time": "Kick-off 4:00 PM",
+      "venue": "Brockton Oval, Stanley Park, Vancouver",
+      "status": "",
+      "link": "/news/wellington-wedgetails-are-coming-to-vancouver/"
+    }
+  ],
+  "matches": [
+    {
+      "date": "2026-05-30",
+      "round": "Round 1",
+      "home": "wolves",
+      "away": "vipers",
+      "home_score": "34",
+      "away_score": "20",
+      "venue": "Brockton Oval, Stanley Park",
+      "time": "",
+      "note": ""
+    },
+    {
+      "date": "2026-05-30",
+      "round": "Round 1",
+      "home": "dragons",
+      "away": "thunder",
+      "home_score": "30",
+      "away_score": "34",
+      "venue": "Brockton Oval, Stanley Park",
+      "time": "",
+      "note": ""
+    },
+    {
+      "date": "2026-06-06",
+      "round": "Round 2",
+      "home": "vipers",
+      "away": "thunder",
+      "home_score": "34",
+      "away_score": "38",
+      "venue": "Langley Rugby Club",
+      "time": "",
+      "note": ""
+    },
+    {
+      "date": "2026-06-06",
+      "round": "Round 2",
+      "home": "wolves",
+      "away": "dragons",
+      "home_score": "58",
+      "away_score": "6",
+      "venue": "Whistler Secondary School",
+      "time": "",
+      "note": ""
+    },
+    {
+      "date": "2026-06-13",
+      "round": "Round 3",
+      "home": "thunder",
+      "away": "wolves",
+      "home_score": "10",
+      "away_score": "68",
+      "venue": "Brockton Oval, Stanley Park",
+      "time": "",
+      "note": ""
+    },
+    {
+      "date": "2026-06-13",
+      "round": "Round 3",
+      "home": "vipers",
+      "away": "dragons",
+      "home_score": "30",
+      "away_score": "46",
+      "venue": "Brockton Oval, Stanley Park",
+      "time": "",
+      "note": ""
+    },
+    {
+      "date": "2026-06-20",
+      "round": "Round 4",
+      "home": "wolves",
+      "away": "vipers",
+      "home_score": "42",
+      "away_score": "18",
+      "venue": "UBC Wolfson Rugby Field",
+      "time": "",
+      "note": ""
+    },
+    {
+      "date": "2026-06-20",
+      "round": "Round 4",
+      "home": "dragons",
+      "away": "thunder",
+      "home_score": "28",
+      "away_score": "30",
+      "venue": "UBC Wolfson Rugby Field",
+      "time": "",
+      "note": ""
+    },
+    {
+      "date": "2026-07-04",
+      "round": "Round 6",
+      "home": "vipers",
+      "away": "dragons",
+      "home_score": "40",
+      "away_score": "36",
+      "venue": "Langley Rugby Club",
+      "time": "",
+      "note": ""
+    },
+    {
+      "date": "2026-07-04",
+      "round": "Round 6",
+      "home": "wolves",
+      "away": "thunder",
+      "home_score": "66",
+      "away_score": "4",
+      "venue": "Whistler Secondary School",
+      "time": "",
+      "note": ""
+    },
+    {
+      "date": "2026-07-11",
+      "round": "Round 5",
+      "home": "vipers",
+      "away": "thunder",
+      "home_score": "46",
+      "away_score": "10",
+      "venue": "Prince of Wales Secondary School",
+      "time": "",
+      "note": "Make-up round"
+    },
+    {
+      "date": "2026-07-11",
+      "round": "Round 5",
+      "home": "wolves",
+      "away": "dragons",
+      "home_score": "24",
+      "away_score": "22",
+      "venue": "Prince of Wales Secondary School",
+      "time": "",
+      "note": "Make-up round"
+    },
+    {
+      "date": "2026-07-18",
+      "round": "Semi-final",
+      "home": "vipers",
+      "away": "thunder",
+      "home_score": "30",
+      "away_score": "22",
+      "venue": "John Oliver Park",
+      "time": "",
+      "note": ""
+    },
+    {
+      "date": "2026-07-25",
+      "round": "Grand final",
+      "home": "wolves",
+      "away": "vipers",
+      "home_score": "28",
+      "away_score": "14",
+      "venue": "Burnaby Lake Rugby Club",
+      "time": "",
+      "note": ""
+    }
+  ],
+  "provisional_months_only": true
+}

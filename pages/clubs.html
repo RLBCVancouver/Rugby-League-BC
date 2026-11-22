@@ -1,0 +1,38 @@
+path: /clubs/
+title: Rugby league clubs in BC
+description: Rugby league clubs in British Columbia: home fields, coaches, contacts and honours for every Rugby League BC club.
+h1: Clubs
+lede: Find a team near you. If you want to know more about a club, the best way is to contact it directly.
+---
+<section class="band">
+  <div class="wrap">
+    {{club_cards}}
+  </div>
+</section>
+
+<section class="band band-chalk">
+  <div class="wrap">
+    <div class="sec-h"><h2>Where the clubs are</h2></div>
+    <div class="embed rv"><iframe src="{{clubs_map_embed_url}}" title="Map of Rugby League BC clubs" loading="lazy"></iframe></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap cols cols-2">
+    <div class="rv">
+      <div class="sec-h"><h2>Coming soon</h2></div>
+      {{coming_soon}}
+    </div>
+    <div class="rv">
+      <div class="sec-h"><h2>Interprovincial rivalry</h2></div>
+      {{interprovincial}}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div><h2>No club in your area?</h2><p>We're always interested in welcoming new teams to the league. Email the board to learn what's required to get started.</p></div>
+    <a class="btn btn-gold" href="mailto:board@rugbyleaguebc.ca">Email the board</a>
+  </div>
+</section>

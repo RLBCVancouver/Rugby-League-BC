@@ -1,0 +1,40 @@
+path: /contact/
+title: Contact Rugby League BC
+description: Contact Rugby League BC: message the board, or reach the right person for playing, coaching, officiating, sponsorship and masters rugby league.
+h1: Contact
+lede: Send the board a message, or go straight to the person who looks after what you need.
+---
+<section class="band">
+  <div class="wrap cols cols-3-2">
+    <div class="rv">
+      <h2 style="margin-bottom:18px">Message the board</h2>
+      <form class="form" name="rlbc-contact" method="POST" data-netlify="true" netlify-honeypot="website" action="/contact/">
+        <input type="hidden" name="form-name" value="rlbc-contact">
+        <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+        <label>Your name <input name="name" autocomplete="name" required></label>
+        <label>Email address <input type="email" name="email" autocomplete="email" required></label>
+        <label>What is it about?
+          <select name="topic">
+            <option>General question</option><option>Playing</option><option>Starting a club</option><option>Coaching</option><option>Officiating</option><option>Volunteering</option><option>Sponsorship</option><option>Media</option>
+          </select></label>
+        <label>Message <textarea name="message" required></textarea></label>
+        <button class="btn btn-blue" type="submit">Send message</button>
+        <p class="form-msg" role="status" tabindex="-1" hidden></p>
+        <p class="fine">Your details are used only to reply to your message.</p>
+      </form>
+    </div>
+    <div class="rv">
+      <h2 style="margin-bottom:18px">Direct contacts</h2>
+      <ul class="contacts">
+        <li><b>RLBC board</b><a href="mailto:board@rugbyleaguebc.ca">board@rugbyleaguebc.ca</a></li>
+        <li><b>Playing and coaching: Stephen Lenahan, Director of Rugby</b><a href="mailto:Stephen.Lenahan@rugbyleaguebc.ca">Stephen.Lenahan@rugbyleaguebc.ca</a></li>
+        <li><b>Sponsorship: Richard Marshall</b><a href="mailto:richard.marshall@rugbyleaguebc.ca">richard.marshall@rugbyleaguebc.ca</a></li>
+        <li><b>Officiating: Blake Stewart</b><a href="mailto:blake.stewart@rugbyleaguebc.ca">blake.stewart@rugbyleaguebc.ca</a></li>
+        <li><b>Masters</b><a href="mailto:masters@rugbyleaguebc.ca">masters@rugbyleaguebc.ca</a></li>
+        <li><b>A specific club</b><a href="/clubs/">Club contacts</a></li>
+      </ul>
+      <p style="margin-top:22px"><a class="more" href="{{instagram_url}}" target="_blank" rel="noopener">@rugbyleaguebc on Instagram</a></p>
+      <p style="margin-top:8px"><a class="more" href="{{mailing_list_url}}" target="_blank" rel="noopener">Join the mailing list</a></p>
+    </div>
+  </div>
+</section>

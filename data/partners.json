@@ -1,0 +1,58 @@
+{
+  "partners": [
+    {
+      "name": "McLeod Technologies Corp.",
+      "website": "https://www.mcleodtech.ca/",
+      "logo": "/assets/img/partner-mcleod-technologies.webp",
+      "label": "Technology Partner",
+      "dark": true
+    },
+    {
+      "name": "Rugby League Coach",
+      "website": "https://rugbyleaguecoach.com.au/",
+      "logo": "/assets/img/partner-rugby-league-coach.webp",
+      "label": "",
+      "dark": false
+    },
+    {
+      "name": "Titan Sports Tape",
+      "website": "https://www.titansportstape.com/",
+      "logo": "/assets/img/partner-titan-sports-tape.webp",
+      "label": "",
+      "dark": false
+    },
+    {
+      "name": "ARVO+ Wellness",
+      "website": "https://www.arvowellness.ca/",
+      "logo": "/assets/img/partner-arvo-wellness.webp",
+      "label": "",
+      "dark": false
+    },
+    {
+      "name": "Rugby League Rat Pack",
+      "website": "https://rugbyleagueratpack.us/",
+      "logo": "/assets/img/partner-rugby-league-rat-pack.webp",
+      "label": "",
+      "dark": false
+    },
+    {
+      "name": "Dally M Collection",
+      "website": "https://www.dallymcollection.com/",
+      "logo": "/assets/img/partner-dally-m-collection.webp",
+      "label": "",
+      "dark": false
+    }
+  ],
+  "employers": [
+    {
+      "name": "A&B Tool Rentals",
+      "website": "https://abtoolrentals.com/",
+      "logo": "/assets/img/partner-ab-tool-rentals.webp"
+    },
+    {
+      "name": "Madden Solutions",
+      "website": "http://www.maddensolutions.com/",
+      "logo": "/assets/img/partner-madden-solutions.webp"
+    }
+  ]
+}

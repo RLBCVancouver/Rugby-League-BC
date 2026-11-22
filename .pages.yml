@@ -1,0 +1,256 @@
+# Pages CMS configuration: the editing screens at https://app.pagescms.org
+media:
+  input: assets/img
+  output: /assets/img
+  path: assets/img
+  extensions: [webp, png, jpg, jpeg]
+
+content:
+  - name: fixtures
+    label: Fixtures, results and events
+    type: file
+    path: data/fixtures.json
+    format: json
+    fields:
+      - { name: season, label: Season shown as current, type: string, description: "For example: 2026. Used in headings such as 'The 2026 season'." }
+      - { name: season_heading, label: Heading above the ladder and results, type: string, description: "For example: 2026 First Grade Men" }
+      - { name: lede, label: Intro line at the top of the Fixtures page, type: text }
+      - { name: show_notice, label: Show the yellow notice box, type: boolean, description: "Turn off once the draw is confirmed" }
+      - { name: notice_title, label: Notice heading, type: string }
+      - { name: notice_text, label: Notice text, type: text }
+      - { name: show_provisional_dates, label: Show the provisional dates block, type: boolean, description: "Turn off once real fixtures are entered below" }
+      - { name: provisional_months_only, label: Show months only (hide exact days), type: boolean }
+      - { name: provisional_heading, label: Heading for the provisional dates, type: string }
+      - name: provisional_dates
+        label: Provisional dates
+        type: object
+        list: true
+        fields:
+          - { name: date, label: Date, type: date, required: true, options: { format: yyyy-MM-dd } }
+          - { name: label, label: What is on, type: string, required: true, description: "For example: Round 1, Grand final" }
+      - name: events
+        label: Events (Coming up). Past events hide themselves.
+        type: object
+        list: true
+        fields:
+          - { name: date, label: Date, type: date, required: true, options: { format: yyyy-MM-dd } }
+          - { name: end_date, label: Last day (only for events longer than one day), type: date, options: { format: yyyy-MM-dd } }
+          - { name: title, label: Title, type: string, required: true }
+          - { name: time, label: Time, type: string, description: "For example: Kick-off 4:00 PM" }
+          - { name: venue, label: Venue, type: string }
+          - { name: status, label: Small label (optional), type: string, description: "For example: Proposed, Sold out" }
+          - { name: month_only, label: Show the month only (hide the exact day), type: boolean }
+          - { name: link, label: Link (optional), type: string, description: "A page on this site, such as /news/dragons-heading-to-vegas/" }
+      - name: matches
+        label: Matches. Leave the scores empty until the game has been played.
+        type: object
+        list: true
+        fields:
+          - { name: date, label: Date, type: date, required: true, options: { format: yyyy-MM-dd } }
+          - { name: round, label: Round, type: string, required: true, description: "Round 1, Round 2 ... Semi-final, Grand final. Only rounds that start with the word 'Round' count towards the ladder." }
+          - { name: home, label: Home team, type: string, required: true, description: "The club's short or full name: Wolves, Vipers, Thunder, Dragons, Warriors, Cougars" }
+          - { name: away, label: Away team, type: string, required: true }
+          - { name: home_score, label: Home score, type: string }
+          - { name: away_score, label: Away score, type: string }
+          - { name: venue, label: Venue, type: string }
+          - { name: time, label: Kick-off time (shown until there is a score), type: string, description: "For example: 2:00 PM" }
+          - { name: note, label: Note (optional), type: string, description: "For example: Make-up round" }
+
+  - name: news
+    label: News
+    type: file
+    path: data/news.json
+    format: json
+    fields:
+      - name: articles
+        label: Articles. The first three show on the home page.
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Headline, type: string, required: true }
+          - { name: slug, label: Web address ending, type: string, description: "Lowercase words joined by hyphens, for example: dragons-heading-to-vegas. Leave empty for a new article and it is made from the headline. Do not change it after publishing." }
+          - { name: date, label: Date (optional), type: date, options: { format: yyyy-MM-dd } }
+          - { name: tag, label: Label, type: string, description: "For example: League, Clubs, International, Community" }
+          - { name: summary, label: One-sentence summary, type: text }
+          - { name: image, label: Picture (optional), type: image }
+          - { name: image_alt, label: Describe the picture (for screen readers), type: string }
+          - { name: card_image, label: Picture for the news cards only (optional), type: image, description: "Use this to show a different picture on the home page and News list than on the article page." }
+          - { name: card_image_alt, label: Describe the card picture, type: string }
+          - { name: card_image_pos, label: Card picture crop (optional), type: string, description: "Which part of the picture to keep in the wide card, for example: 50% 20% (second number moves it up or down)." }
+          - { name: card_credit, label: Photo credit on the card (optional), type: string, description: "For example: Photo: @alfred_rugby" }
+          - { name: body, label: Article, type: rich-text }
+
+  - name: clubs
+    label: Clubs
+    type: file
+    path: data/clubs.json
+    format: json
+    fields:
+      - name: clubs
+        label: Clubs. Each club gets its own page.
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "Short code (do not change)", type: string, required: true, description: "One lowercase word, for example: wolves" }
+          - { name: slug, label: "Web address ending (do not change)", type: string, required: true, description: "For example: whistler-wolves" }
+          - { name: name, label: Club name, type: string, required: true }
+          - { name: short, label: Short name, type: string, description: "For example: Wolves" }
+          - { name: logo, label: Crest, type: image, required: true, description: "WebP or PNG with a transparent background" }
+          - { name: status, label: Small label (optional), type: string, description: "For example: Coming soon. Clubs with a label are left off the home page row." }
+          - { name: home_field, label: Home field, type: string }
+          - { name: founded, label: Year founded, type: string }
+          - name: coaches
+            label: Coaches
+            type: object
+            list: true
+            fields:
+              - { name: role, label: Role, type: string, description: "For example: Head coach" }
+              - { name: name, label: Name, type: string }
+          - { name: practices, label: Practice times, type: string }
+          - { name: email, label: Contact email, type: string }
+          - { name: website, label: Website, type: string }
+          - { name: instagram, label: Instagram link, type: string }
+          - { name: nines_titles, label: RLBC 9s titles (years), type: string, description: "For example: 2023, 2024" }
+          - { name: photo, label: Header photo (optional), type: image, description: "A wide action shot. Shown behind the club name." }
+      - name: coming_soon
+        label: Coming soon crests (Clubs page)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string, required: true }
+          - { name: logo, label: Crest, type: image, required: true }
+          - { name: url, label: Link (optional), type: string }
+      - name: interprovincial
+        label: Interprovincial rivals (Clubs page)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string, required: true }
+          - { name: logo, label: Crest, type: image, required: true }
+          - { name: url, label: Link (optional), type: string }
+
+  - name: honours
+    label: Past premiers
+    type: file
+    path: data/honours.json
+    format: json
+    fields:
+      - name: seasons
+        label: Seasons, newest first. Club honours are counted from this list.
+        type: object
+        list: true
+        fields:
+          - { name: year, label: Year, type: string, required: true }
+          - { name: premier, label: Premiers, type: string, required: true, description: "Spell the club name exactly as on the Clubs screen" }
+          - { name: runner_up, label: Runners-up, type: string }
+          - { name: score, label: Grand final score, type: string, description: "For example: 28-14" }
+          - { name: venue, label: Venue, type: string }
+          - { name: results_image, label: Season results graphic (optional), type: image }
+
+  - name: board
+    label: Board
+    type: file
+    path: data/board.json
+    format: json
+    fields:
+      - name: people
+        label: Board members. Type Vacant as the name for an open role.
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string, required: true }
+          - { name: role, label: Role, type: string, required: true }
+          - { name: email, label: Email address, type: string, description: "Leave empty to use board@rugbyleaguebc.ca" }
+          - { name: photo, label: Photo (optional), type: image }
+
+  - name: gallery
+    label: Photo gallery
+    type: file
+    path: data/gallery.json
+    format: json
+    fields:
+      - name: photos
+        label: Photos (shown on the Gallery page; the first four also appear on the home page)
+        type: object
+        list: true
+        fields:
+          - { name: image, label: Photo, type: image, required: true }
+          - { name: alt, label: Describe the photo, type: string, required: true, description: "One short sentence for screen readers, for example: A Whistler Wolves player runs the ball up." }
+
+  - name: faq
+    label: FAQ (questions and answers)
+    type: file
+    path: data/faq.json
+    format: json
+    fields:
+      - name: items
+        label: Questions (shown on the FAQ page and read by Google and AI assistants)
+        type: object
+        list: true
+        fields:
+          - { name: q, label: Question, type: string, required: true }
+          - { name: a, label: Answer, type: text, required: true, description: "Plain sentences. You can type {clubs}, {president} or {premier} and the site fills them in from the other pages." }
+
+  - name: partners
+    label: Partners
+    type: file
+    path: data/partners.json
+    format: json
+    fields:
+      - name: partners
+        label: Partners (home page and Partners page)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string, required: true }
+          - { name: website, label: Website link, type: string, required: true, description: "Full address, starting with https://" }
+          - { name: logo, label: Logo, type: image, required: true }
+          - { name: label, label: Label under the name (optional), type: string }
+          - { name: dark, label: Logo has a black background, type: boolean, description: "Turn on for logos designed on black, so they sit on a black tile" }
+      - name: employers
+        label: Community employers (New to BC and looking for work)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string, required: true }
+          - { name: website, label: Website link, type: string, required: true }
+          - { name: logo, label: Logo, type: image, required: true }
+
+  - name: settings
+    label: Site settings and links
+    type: file
+    path: data/settings.json
+    format: json
+    fields:
+      - { name: show_draft_notice, label: Show the yellow draft notice bar, type: boolean }
+      - { name: hide_from_search, label: Hide the site from Google and other search engines, type: boolean, description: "Leave OFF so Google and AI assistants can find the site. Only turn on to hide the site again (and add an X-Robots-Tag noindex line to _headers)." }
+      - { name: registration_heading, label: Registration heading, type: string }
+      - { name: registration_note, label: Registration note, type: text }
+      - name: registration_links
+        label: Registration links (Get involved page)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Button text, type: string, required: true }
+          - { name: url, label: Link, type: string }
+          - { name: note, label: Small note (optional), type: string }
+      - { name: coach_registration_url, label: Coach registration link, type: string }
+      - { name: admin_registration_url, label: Admin registration link, type: string }
+      - { name: registration_open, label: Registration is open (show the links), type: boolean, description: "Leave off until the new season's links are added. While off, each option shows 'Link coming soon'." }
+      - { name: registration_closed_note, label: Message while registration is closed, type: text }
+      - { name: volunteer_form_url, label: Volunteer form link, type: string }
+      - { name: supporters_signup_url, label: Supporters club sign-up link, type: string }
+      - { name: mailing_list_url, label: Mailing list sign-up link, type: string }
+      - { name: store_url, label: RLBC store link, type: string }
+      - { name: calendar_embed_url, label: Google Calendar embed link, type: string }
+      - { name: clubs_map_embed_url, label: Clubs map embed link, type: string }
+      - { name: fixtures_sheet_csv_url, label: "Advanced: live fixtures Google Sheet (CSV link)", type: string, description: "Leave empty to use the matches entered in this editor. See the README before using." }
+      - name: social
+        label: Social media links
+        type: object
+        fields:
+          - { name: instagram, label: Instagram, type: string }
+          - { name: facebook, label: Facebook, type: string }
+          - { name: youtube, label: YouTube, type: string }
+          - { name: x, label: X, type: string }
+          - { name: linkedin, label: LinkedIn, type: string }

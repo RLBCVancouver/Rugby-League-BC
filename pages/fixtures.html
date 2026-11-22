@@ -1,0 +1,41 @@
+path: /fixtures/
+title: Fixtures, results and ladder
+description: Rugby League BC fixtures, results and the league ladder, plus upcoming events and provisional dates for next season.
+h1: Fixtures and results
+lede: {{fx_lede}}
+---
+<section class="band">
+  <div class="wrap">
+    {{notice}}
+    <div class="sec-h"><h2>Coming up</h2></div>
+    {{events}}
+  </div>
+</section>
+
+{{provisional}}
+
+<section class="band" id="results">
+  <div class="wrap">
+    <div class="sec-h"><h2>{{season_heading}}</h2></div>
+    <div id="ladder" class="rv">
+      {{ladder}}
+      <p class="note">The ladder is worked out from regular-season results: sorted by wins, then points difference. Finals are not counted.</p>
+    </div>
+    <h3 class="vh">Results by round</h3>
+    <div style="margin-top:40px">
+      {{filter}}
+      <div class="rds rds-all" data-live>{{results}}</div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-chalk" id="calendar">
+  <div class="wrap">
+    <div class="sec-h"><h2>League calendar</h2><p>The RLBC Google Calendar, with fixtures, courses and events as they're confirmed.</p></div>
+    <details class="fold">
+      <summary>Show the calendar</summary>
+      <div class="embed"><iframe src="{{calendar_embed_url}}" title="Rugby League BC calendar" loading="lazy"></iframe></div>
+    </details>
+    <p style="margin-top:22px"><a class="more" href="/about/#honour-roll">Past seasons and premiers</a></p>
+  </div>
+</section>
