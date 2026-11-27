@@ -57,7 +57,7 @@
     { id: 'clubs', label: 'Which clubs are there?',
       keys: ['club', 'clubs', 'team', 'teams', 'near me', 'nearest', 'where can i play', 'whistler', 'wolves', 'thunder', 'point grey', 'ubc', 'dragons', 'vancouver dragons', 'vipers', 'langley', 'warriors', 'cougars', 'squamish', 'surrey', 'abbotsford', 'kelowna', 'richmond', 'who plays'],
       a: competing.length ? ('The clubs currently competing are ' + list(competing) + '. They are based in the Lower Mainland and Whistler. Each club page has home field, coaches and contact details. Want to start a club in your area? Email ' + mail(BOARD) + '.') : ('Club details are on the Clubs page. Want to start a club in your area? Email ' + mail(BOARD) + '.'),
-      go: [['Find a club', '/clubs/'], ['Start a team', '/contact/?topic=Starting%20a%20club']] },
+      go: [['Find a club', '/clubs/'], ['Start a club', '/get-involved/#start-a-club']] },
     { id: 'season', label: 'When is the season?',
       keys: ['season', 'schedule', 'fixture', 'fixtures', 'draw', 'when', 'dates', 'date', 'calendar', 'round', 'rounds', 'semi', 'final', 'finals', 'grand final', 'game day', 'match', 'matches', 'kick off', 'kickoff', 'results', 'ladder', 'table', 'standings'],
       a: seasonLine() + ' Results and the ladder are on the fixtures page.',

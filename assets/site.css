@@ -137,7 +137,7 @@ h3{font-size:1.2rem;line-height:1.25;font-weight:750;letter-spacing:-.005em}
 a[href^="mailto:"]{overflow-wrap:anywhere}
 @media (min-width:860px){.cols-2{grid-template-columns:1fr 1fr}.cols-3-2{grid-template-columns:3fr 2fr}.cols-2-3{grid-template-columns:2fr 3fr}}
 .stack>*+*{margin-top:1em}
-.stack>h3{margin-top:1.6em}
+.stack>h3{margin-top:1.6em}.stack>h3:first-child{margin-top:0}
 .stack>h2+*{margin-top:.6em}
 .prose{max-width:42em}
 .prose>*+*{margin-top:1.05em}

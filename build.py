@@ -345,6 +345,14 @@ def r_final(D):
             f'<p class="sb-foot"><span>{esc(D.fx.get("season", ""))} premiers</span> <a href="{win["url"]}">{esc(win["name"])}</a></p></div>')
 
 
+def mail_links(t):
+    return re.sub(r'([\w.+-]+@[\w-]+(?:\.[\w-]+)+?)(?=[.,]?(?:\s|$))', r'<a href="mailto:\1">\1</a>', t)
+
+
+def club_place(c):
+    return (c.get('home_field') or '').split('.')[0] or c.get('location', '')
+
+
 def club_honours(D, name):
     prem = sorted((s['year'] for s in D.honours if s.get('premier') == name), reverse=False)
     ru = sorted(s['year'] for s in D.honours if s.get('runner_up') == name)
@@ -357,8 +365,8 @@ def r_club_cards(D):
         prem, ru = club_honours(D, c['name'])
         st = f'<span class="pill">{esc(c["status"])}</span>' if c.get('status') else ''
         facts = f'<span>Est. {esc(c["founded"])}</span>' if c.get('founded') else ''
-        if c.get('home_field'):
-            facts += f'<span>{esc(c["home_field"].split(".")[0])}</span>'
+        if club_place(c):
+            facts += f'<span>{esc(club_place(c))}</span>'
         hon = f'<p class="cc-hon"><b>{len(prem)}</b> premiership{"s" if len(prem) != 1 else ""}: {", ".join(prem)}</p>' if prem else ''
         out += (f'<li class="cc"><a class="cc-a" href="/clubs/{esc(c["slug"])}/">{tile(c["logo"], c["name"] + " crest", "tile-l")}'
                 f'<div class="cc-b">{st}<h3>{esc(c["name"])}</h3><p class="cc-f">{facts}</p>{hon}</div></a></li>')
@@ -655,7 +663,9 @@ def club_page(D, c):
 
     def row(k, v):
         return f'<div><dt>{esc(k)}</dt><dd>{v}</dd></div>' if v else ''
+    rows += row('Status', esc(c.get('status_detail', '')))
     rows += row('Home field', esc(c.get('home_field', '')))
+    rows += row('Location', esc(c.get('location', '')) if not c.get('home_field') else '')
     rows += row('Founded', esc(c.get('founded', '')))
     for co in c.get('coaches') or []:
         rows += row(co.get('role') or 'Coach', esc(co.get('name', '')))
@@ -684,19 +694,27 @@ def club_page(D, c):
     cta = ''
     if c.get('email'):
         cta = f'<a class="btn btn-gold" href="mailto:{esc(c["email"])}">Contact the club</a>'
+    box = c.get('cta') or {}
+    if box.get('title'):
+        paras = ''.join(f'<p>{mail_links(esc(t.strip()))}</p>' for t in (box.get('body') or '').split('\n\n') if t.strip())
+        b1 = f'<a class="btn btn-gold" href="{esc(box["button_url"])}">{esc(box.get("button") or "Contact RLBC")}</a>' if box.get('button_url') else ''
+        b2 = f'<a class="btn btn-line-d" href="{esc(box["button2_url"])}">{esc(box.get("button2") or "Start a Club")}</a>' if box.get('button2_url') else ''
+        cta_box = f'<h2>{esc(box["title"])}</h2>{paras}<p class="btns">{b1}{b2}</p>'
+    else:
+        cta_box = (f'<h2>Want to play for the {esc(c.get("short") or c["name"])}?</h2>'
+                   f'<p>Clubs welcome new and experienced players. Get in touch with the club directly, then register through RLBC.</p><p class="btns">{cta}<a class="btn btn-line-d" href="/get-involved/#play">How to register</a></p>')
     main = (page_head(esc(c['name']), '', ('/clubs/', 'Clubs'), f'<div class="ph-club">{tile(c["logo"], c["name"] + " crest", "tile-xl")}{st}</div>', bg=c.get('photo') or '')
-            + f'<section class="band"><div class="wrap club-top"><dl class="facts rv">{rows}</dl><div class="club-cta rv"><h2>Want to play for the {esc(c.get("short") or c["name"])}?</h2>'
-              f'<p>Clubs welcome new and experienced players. Get in touch with the club directly, then register through RLBC.</p><p class="btns">{cta}<a class="btn btn-line-d" href="/get-involved/#play">How to register</a></p></div></div></section>'
+            + f'<section class="band"><div class="wrap club-top"><dl class="facts rv">{rows}</dl><div class="club-cta rv">{cta_box}</div></div></section>'
             + hon + res)
-    desc = f'{c["name"]}: {("home field " + c["home_field"].split(".")[0] + ", ") if c.get("home_field") else ""}founded {c.get("founded", "")}. Club contacts, honours and results in Rugby League BC.'
+    desc = f'{c["name"]}: {("home field " + c["home_field"].split(".")[0] + ", ") if c.get("home_field") else (c["location"] + ", ") if c.get("location") else ""}founded {c.get("founded", "")}. Club contacts, honours and results in Rugby League BC.'
     team = {"@context": "https://schema.org", "@type": "SportsTeam", "name": c['name'], "sport": "Rugby league", "url": f'{SITE}/clubs/{c["slug"]}/',
             "memberOf": {"@id": SITE + "/#org"}}
     if c.get('logo'):
         team["logo"] = SITE + c['logo']
     if c.get('founded'):
         team["foundingDate"] = c['founded']
-    if c.get('home_field'):
-        team["location"] = {"@type": "Place", "name": c['home_field'].split('.')[0]}
+    if club_place(c):
+        team["location"] = {"@type": "Place", "name": club_place(c)}
     if c.get('instagram'):
         team["sameAs"] = [c['instagram']] + ([c['website']] if c.get('website') else [])
     return layout(D, f'/clubs/{c["slug"]}/', c['name'] + ' rugby league club', desc, main, ld=[team])
@@ -816,7 +834,7 @@ def main():
     L = ['# Rugby League BC (RLBC)', '',
          '> Rugby League British Columbia is the non-profit governing body for rugby league (the 13-a-side game) in British Columbia, Canada. Founded in 2011, it operates under Canada Rugby League.',
          '', '## Key facts',
-         '- Clubs: ' + '; '.join(f'{c["name"]} ({c.get("home_field", "").split(".")[0]}, founded {c.get("founded", "")}{", " + c["status"].lower() if c.get("status") else ""})' for c in D.clubs) + '.']
+         '- Clubs: ' + '; '.join(f'{c["name"]} ({club_place(c)}, founded {c.get("founded", "")}{", " + c["status"].lower() if c.get("status") else ""})' for c in D.clubs) + '.']
     if prem:
         L.append(f'- {prem["year"]} premiers: {prem["premier"]}' + (f' (beat {prem["runner_up"]} {prem.get("score", "").replace("-", "–")} in the grand final).' if prem.get('runner_up') else '.'))
     L += ['- Past premiers: ' + ', '.join(f'{x["year"]} {x["premier"]}' for x in D.honours) + '.',

@@ -97,7 +97,9 @@ content:
           - { name: short, label: Short name, type: string, description: "For example: Wolves" }
           - { name: logo, label: Crest, type: image, required: true, description: "WebP or PNG with a transparent background" }
           - { name: status, label: Small label (optional), type: string, description: "For example: Coming soon. Clubs with a label are left off the home page row." }
+          - { name: status_detail, label: Status line on the club page (optional), type: string, description: "For example: Seeking club leadership" }
           - { name: home_field, label: Home field, type: string }
+          - { name: location, label: Location (used when there is no home field), type: string, description: "For example: North Vancouver" }
           - { name: founded, label: Year founded, type: string }
           - name: coaches
             label: Coaches
@@ -112,8 +114,18 @@ content:
           - { name: instagram, label: Instagram link, type: string }
           - { name: nines_titles, label: RLBC 9s titles (years), type: string, description: "For example: 2023, 2024" }
           - { name: photo, label: Header photo (optional), type: image, description: "A wide action shot. Shown behind the club name." }
+          - name: cta
+            label: Right-hand box (optional). Leave empty for the standard "Want to play for..." box.
+            type: object
+            fields:
+              - { name: title, label: Heading, type: string }
+              - { name: body, label: Text, type: text, description: "Leave a blank line between paragraphs. Email addresses become links." }
+              - { name: button, label: Yellow button text, type: string }
+              - { name: button_url, label: Yellow button link, type: string }
+              - { name: button2, label: Outlined button text, type: string }
+              - { name: button2_url, label: Outlined button link, type: string }
       - name: coming_soon
-        label: Coming soon crests (Clubs page)
+        label: Possible expansion teams crests (Clubs page)
         type: object
         list: true
         fields:

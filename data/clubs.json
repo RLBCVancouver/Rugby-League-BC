@@ -98,7 +98,7 @@
       "name": "Valley Warriors",
       "short": "Warriors",
       "logo": "/assets/img/club-valley-warriors.webp",
-      "status": "Not competing",
+      "status": "Coming soon",
       "home_field": "South Surrey Athletic Field",
       "founded": "2014",
       "coaches": [
@@ -120,21 +120,26 @@
       "name": "Coastal Cougars",
       "short": "Cougars",
       "logo": "/assets/img/club-coastal-cougars.webp",
-      "status": "Coming soon",
-      "home_field": "Howe Sound Secondary, Squamish",
+      "status": "Not competing",
+      "status_detail": "Seeking club leadership",
+      "home_field": "",
+      "location": "North Vancouver",
       "founded": "2012",
-      "coaches": [
-        {
-          "role": "Head coach",
-          "name": "Alec Douglas"
-        }
-      ],
+      "coaches": [],
       "practices": "",
-      "email": "alec.p.douglas604@gmail.com",
+      "email": "blake.stewart@rugbyleaguebc.ca",
       "website": "",
       "instagram": "https://www.instagram.com/coastalcougarsrl/",
       "nines_titles": "2016, 2017, 2019",
-      "photo": ""
+      "photo": "",
+      "cta": {
+        "title": "Want to bring the Cougars back?",
+        "body": "We’re looking for passionate individuals interested in reviving the Coastal Cougars and bringing rugby league back to North Vancouver.\n\nIf you’re interested in running the club, coaching or getting involved, Rugby League BC is here to help.\n\nGet in touch at board@rugbyleaguebc.ca.",
+        "button": "Contact RLBC",
+        "button_url": "mailto:board@rugbyleaguebc.ca",
+        "button2": "Start a Club",
+        "button2_url": "/get-involved/#start-a-club"
+      }
     }
   ],
   "coming_soon": [
